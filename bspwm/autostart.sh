@@ -14,15 +14,15 @@ function run {
 #xrandr --output HDMI2 --mode 1920x1080 --pos 1920x0 --rotate normal --output HDMI1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off
 
 #Screen  layout  arandr script
-run $HOME/.screeenlayout/screenlayout.sh &
+run $HOME/screeenlayout/screenlayout.sh &
 
 #Plolybar  run  script
 $HOME/.config/polybar/launch.sh &
 
 #change your keyboard if you need it
-
 setxkbmap -layout "us,gr" -option  "grp:alt_shift_toggle"
-
+## Make monitor settings persist between reboots
+eval $(awk -F'=' '/Exec=/ {print $2}' ~/.config/autostart/lxrandr-autostart.desktop) &
 
 xsetroot -cursor_name left_ptr &
 run sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
@@ -36,7 +36,7 @@ picom --config $HOME/.config/bspwm/picom.conf &
 run volumeicon &
 nitrogen --restore &
 run xfce4-clipman &
-run ffplay -nodisp -autoexit  $HOME/Music/stereo/bell.oga &
+run ffplay -nodisp -autoexit  $HOME/Music/device-added.oga&
 run thunar --daemon &
 #run thunderbird --daemon &
 ckb-next  & 
