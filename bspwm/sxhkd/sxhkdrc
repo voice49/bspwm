@@ -51,12 +51,11 @@ super + F9
 
 #Rofi
 super + F10
-    rofi -show window -show-icons
+   ~/.config/rofi/rofi-sound2.sh
 
 #Rofi  list  of  commands
 super + F11
-    rofi -show drun  -show-icons
-
+     ~/.config/rofi/rofi-sound1.sh
 #Rofi
 super + F12
     rofi -show ssh
@@ -67,11 +66,11 @@ super + F12
 
 #Rofimenu
 super + d
-  rofi -no-config -no-lazy-grab -show drun -theme $HOME/.config/voice49/rofi/list_launcher.rasi
+  rofi -no-config -no-lazy-grab -show drun -theme $HOME/.config/voice49/rofi/list_launcher.rasi & paplay ~/Music/alert.wav
 
-#Geany
+#Wttr
 super + e
-   geany
+    ~/.config/bspwm/scripts/wttr.sh
 
 #Browser
 super + w
@@ -81,7 +80,7 @@ super + w
 super + h
     xfce4-terminal  -e htop
 
-#Gtop
+#Xfce-taskmanager
 super + g
      xfce4-taskmanager
 
@@ -149,8 +148,8 @@ super + shift + Return
 #	thunar
 
 #Rofi quick links
-super + shift + d
-      ~/.config/rofi-quicklinks/quicklinks.sh
+#super + shift + d
+     # ~/.config/rofi-quicklinks/quicklinks.sh
 
 
 
@@ -171,9 +170,9 @@ super + shift + s
 ctrl + alt + w
     firefox
 
-#File-Manager
+#Rofi bookmarks
 ctrl + alt + b
-     thunar
+     ~/.config/bspwm/scripts/book.sh
 
 #Catfish
 ctrl + alt + c
@@ -455,7 +454,7 @@ super + ctrl + {_,shift +}{1-9}
 
 #Focus selected desktop
 alt + Tab
-	rofi -combi-modi window,drun -show-icons -show combi -modi combi
+	~/.config/rofi/rofi-sound1.sh
 
 #Rotate desktop
 alt + space
